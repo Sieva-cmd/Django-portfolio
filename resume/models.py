@@ -19,6 +19,10 @@ class Projects(models.Model):
 
     def delete_project(self):
         self.delete()  
+    @classmethod
+    def filter_projects_by_id(cls,project):
+      project =cls.objects.filter(id__in=project) 
+      return project       
 
 
 class Profile(models.Model):
@@ -30,7 +34,13 @@ class Profile(models.Model):
 
     
     def __str__(self):
-        return f'{self.user.username} Profile'              
+        return f'{self.name}'              
 
     def save_profile(self):
-        self.save()    
+        self.save() 
+
+
+    @classmethod
+    def filter_profile_by_id(cls,profile):
+      profile =cls.objects.filter(id__in=profile) 
+      return profile            
