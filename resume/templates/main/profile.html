@@ -1,0 +1,21 @@
+{%extends 'main/base.html'%}
+{% load static %}
+{% block content %}
+{{block.super}}
+<div class="container">
+    <div class="row">
+        {%for profile in profiles%}
+        <div class="col-md-4">
+            <img src="{{profile.profile_pic.url }} " alt="" class="rounded-circle img-responsive" height="300px" width="300px">
+
+        </div>
+        <div class="col-md-4">
+            <p> Name: {{ profile.name}} </p>
+            <p> Bio:  {{ profile.bio}} </p>
+            <p> Email: {{ profile.email}} </p>
+            <button> <a href="{{profile.git}} ">View Profile in Github</a></button>
+        </div>
+        {%endfor%}
+    </div>
+</div>
+{%endblock%}

@@ -7,7 +7,7 @@
         {%for profile in profiles%}
         <div class="col-md-4">
             
-            <img src="{{profile.profile_pic.url }} " alt="">
+            <img src="{{profile.profile_pic.url }} " alt="" class="img-responvive">
            
         </div>
         <br>
@@ -20,19 +20,34 @@
     <h3 style="text-align: center;"> PROJECTS</h3>
     <br>
     <div class="row">
-        <div class="col-md-8">
+        {%for project in projects%}
+        <div class="col-md-4 mt-4">
            
-            {%for project in projects%}
+ 
             <div class="card" style="width: 18rem;">
                 <img class="card-img-top" src="{{project.image.url}} " alt="Card image cap">
                 <div class="card-body">
                   <h5 class="card-title">{{project.title}} </h5>
                   <p class="card-text"> {{project.description}} </p>
+                  <p class="card-text"> Technologies:{{project.technologies_used}} </p>
                   <a href="{{project.url}} " class="btn btn-primary">view Project </a>
                 </div>
               </div>
-            {%endfor%}
+         
         </div>
+        {%endfor%}
     </div>
 </div>
+
+<!-- Footer -->
+<footer class="page-footer font-small bg-primary">
+
+    <!-- Copyright -->
+    <div class="footer-copyright text-center py-3" style="color: white;">© 2022 Copyright:
+      <a href="/" style="color: white;"> musyokasieva</a>
+    </div>
+    <!-- Copyright -->
+  
+  </footer>
+  <!-- Footer -->
 {%endblock%}

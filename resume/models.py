@@ -31,6 +31,7 @@ class Profile(models.Model):
     profile_pic = models.ImageField(upload_to='images/',default='v1639327874/images/default_drurzc.jpg')
     phone_number = PhoneField(max_length=15, blank=True)
     email =models.EmailField(max_length=200)
+    git =models.URLField(max_length=400,default='https://github.com/Sieva-cmd')
 
     
     def __str__(self):
