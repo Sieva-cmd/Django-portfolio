@@ -32,6 +32,7 @@ class Profile(models.Model):
     phone_number = PhoneField(max_length=15, blank=True)
     email =models.EmailField(max_length=200)
     git =models.URLField(max_length=400,default='https://github.com/Sieva-cmd')
+    linkedIn =models.URLField(max_length=100,default='https://www.linkedin.com/in/sieva-musyoka-18a730227/')
 
     
     def __str__(self):

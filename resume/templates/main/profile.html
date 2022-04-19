@@ -13,6 +13,8 @@
             <p> Name: {{ profile.name}} </p>
             <p> Bio:  {{ profile.bio}} </p>
             <p> Email: {{ profile.email}} </p>
+            <p><a href="{{profile.git}} ">Github</a> </p>
+            <p> <a href="{{ profile.linkedIn }}">LinkedIn </a> </p>
             <button> <a href="{{profile.git}} ">View Profile in Github</a></button>
         </div>
         {%endfor%}
