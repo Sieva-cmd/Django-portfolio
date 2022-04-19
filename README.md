@@ -1,5 +1,5 @@
 # Portofolio
-My projects and contact fetails
+My projects and contact details
 
 
 #### By 
